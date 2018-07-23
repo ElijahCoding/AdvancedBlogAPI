@@ -7,8 +7,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
-    def __unicode__(self):
+    def __unicode__(self): # python 2.7
         return self.title
 
-    def __str__(self):
+    def __str__(self): # python 3.0
         return self.title
