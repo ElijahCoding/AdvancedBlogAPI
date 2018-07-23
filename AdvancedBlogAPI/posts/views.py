@@ -9,7 +9,7 @@ def post_detail(request):
     pass
 
 def post_list(request):
-    pass
+    return render(request, 'index.html')
 
 def post_update(request):
     pass
