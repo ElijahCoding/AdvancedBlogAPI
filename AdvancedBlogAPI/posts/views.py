@@ -6,8 +6,8 @@ from .models import Post
 def post_create(request):
     pass
 
-def post_detail(request):
-    instance = get_object_or_404(Post, id=1)
+def post_detail(request, id=None):
+    instance = get_object_or_404(Post, id=id)
     context = {
         'obj': instance
     }
