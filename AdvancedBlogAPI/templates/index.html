@@ -5,6 +5,10 @@
         <title></title>
     </head>
     <body>
-        <p>template working</p>
+        {% for obj in object_list %}
+            {{ obj.title }}
+            
+        {% endfor %}
+
     </body>
 </html>
