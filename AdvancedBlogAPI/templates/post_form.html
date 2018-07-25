@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-    </head>
-    <body>
-        <h1>Form</h1>
+{% extends "base.html" %}
 
-        <form method="POST" action="{% url 'posts:create' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Create Post" />
-        </form>
-    </body>
-</html>
+{% block content %}
+<h1>Form</h1>
+
+<form method="POST" action="{% url 'posts:create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create Post" />
+</form>
+
+{% endblock content %}
