@@ -29,8 +29,21 @@ def post_list(request):
     }
     return render(request, 'index.html', context)
 
-def post_update(request):
-    pass
+def post_update(request, id=None):
+    instance = get_object_or_404(Post, id=id)
+
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+
+    context = {
+        "title": instance.title,
+        "instance": instance,
+        "form": form
+    }
+
+    return render(request, "post_form.html", context)
 
 def post_delete(request):
     pass
