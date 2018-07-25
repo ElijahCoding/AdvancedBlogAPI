@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block head_title %}
+    {{ obj.title }} | {{ block.super }}
+{% endblock head_title %}
+
 {% block content %}
     {{ obj.title }}<br>
     {{ obj.content }}<br>
