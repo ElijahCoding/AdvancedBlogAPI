@@ -5,9 +5,9 @@
 {% endblock head_title %}
 
 {% block content %}
-    {{ obj.title }}<br>
-    {{ obj.content }}<br>
-    {{ obj.timestamp }}<br>
-    {{ obj.updated }}<br>
-    {{ obj.id }}<br>
+<div class="col-sm-6 col-sm-offset-3">
+    <h1>{{ obj.title }} <small>{{ obj.timestamp }}<br></small></h1>
+    {{ obj.content|linebreaks }}<br>
+</div>
+
 {% endblock content %}
