@@ -21,7 +21,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'posts',
     'news',
-    'todo',
+    'Todo',
     'ModelDeepLearning',
     'django.contrib.admin',
     'django.contrib.auth',
