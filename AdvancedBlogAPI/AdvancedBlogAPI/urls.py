@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^posts/', include('posts.urls', namespace="posts")),
     url(r'^news/', include('news.urls', namespace="news")),
     url(r'^todo/', include('Todo.urls', namespace="todo")),
+    url(r'^weather/', include('weather.urls', namespace="weather"))
 ]
 
 urlpatterns += staticfiles_urlpatterns()
